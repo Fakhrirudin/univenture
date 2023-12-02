@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <link rel="shortcut icon" href="img/logo-dark.jpg">
+    <title>Univenture</title>
+  </head>
+  <body>
+      <style>
+      .hide-scroll-bar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scroll-bar::-webkit-scrollbar {
+        display: none;
+      }
+      </style>
+    <div class="absolute left-0 top-0 w-full bg-white shadow-lg z-10">
+      <div
+        x-data="{ open: true }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+      >
+        <div class="flex flex-row items-center justify-between py-3 px-2">
+          <div class="flex flex-row items-center">
+            <a
+              href="#"
+              class="flex flex-row items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
+            >
+              <img
+                class="h-10 mr-3 rounded-full"
+                src="img/logo-dark.jpg"
+                alt=""
+              />
+              Univenture</a
+            >
+          </div>
+          <button
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </div>
+      <div class="h-screen w-full flex flex-col bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1585357214259-f977cc7d73a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </div>
+        <div class="flex bg-slate-400">
+          <button class="absolute bottom-[15%] left-2/4 bg-gray-800 text-white text-sm rounded-full shadow-md px-5 py-2">Explore Now!</button>
+        </div>
+    </div>
+    
+    <!-- component -->
+<div class="flex flex-col bg-white m-auto p-auto">
+  <h1
+          class="flex py-5 lg:px-14 md:px-10 px-5 lg:mx-14 md:mx-8 mx-6 font-bold text-2xl text-gray-800"
+        >
+          Destinasi Pilihan
+        </h1>
+        <div
+          class="flex overflow-x-scroll pb-10 hide-scroll-bar lg:mx-14 md:mx-8 mx-6"
+        >
+          <div
+            class="flex flex-nowrap"
+          >
+            <div class="inline-block px-3">
+              <a href="bandung.html">
+                <div
+                class="flex flex-col w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                >
+                <img class="h-36 bg-cover bg-center rounded" src="img/bandung.webp" alt="">
+                <h4 class="pl-4 mt-2 font-bold">Bandung</h4>
+                <div class="text-sm py-2 px-3">Rekomendasi tempat healing barudak Bandung</div>
+              </div>
+            </a>
+            </div>
+            <div class="inline-block px-3">
+              <a href="jakarta.html">
+                <div
+                class="flex flex-col w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                >
+                <img class="w-full h-36 bg-cover bg-center rounded" src="img/jakarta.jpg" alt="">
+                <h4 class="pl-4 mt-2 font-bold">Jakarta</h4>
+                <div class="text-sm py-2 px-3">Rekomendasi tempat untuk healing di Jakarta</div>
+              </div>
+            </a>
+            </div>
+            <div class="inline-block px-3">
+              <a href="bogor.html">
+                <div
+                class="flex flex-col w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                >
+                <img class="w-full h-36 bg-cover bg-center rounded" src="img/bogor.jpg" alt="">
+                <h4 class="pl-4 mt-2 font-bold">Bogor</h4>
+                <div class="text-sm py-2 px-3">Rekomendasi tempat untuk healing di Jakarta</div>
+              </div>
+            </a>
+            </div>
+            <div class="inline-block px-3">
+              <a href="">
+                <div
+                class="flex flex-col w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                >
+                <img class="w-full h-36 bg-cover bg-center rounded" src="img/garut.jpg" alt="">
+                <h4 class=" pl-4 mt-2 font-bold">Garut</h4>
+                <div class="text-sm py-2 px-3">Rekomendasi tempat untuk healing di Jakarta</div>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <!--Footer -->
+  <hr class="border-slate-700 my-7 lg:mx-16 md:mx-12 mx-8">
+  <div class="flex flex-col px-3 pt-3">
+    <div class="flex flex-row justify-center gap-10 items-center mb-6">
+      <i class="fa-brands fa-instagram text-xl text-slate-500 hover:text-slate-800"></i>
+      <i class="fa-brands fa-tiktok text-xl text-slate-500 hover:text-slate-800"></i>
+      <i class="fa-brands fa-github text-xl text-slate-500 hover:text-slate-800"></i>
+      <i class="fa-brands fa-linkedin text-xl text-slate-500 hover:text-slate-800"></i>
+    </div>
+    <div class="flex flex-col items-center gap-6 mb-8">
+      <div class="flex flex-wrap items-center justify-center gap-5 lg:gap-12 gap-y-3 lg:flex-nowrap text-dark-grey-900">
+        <a href="" class="text-gray-600 hover:text-gray-900">About</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Features</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Blog</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Resources</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Partners</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Help</a>
+        <a href="" class="text-gray-600 hover:text-gray-900">Terms</a>
+      </div>
+      <div class="flex flex-wrap -mx-3 my-5">
+        <div class="w-full max-w-full sm:w-3/4 mx-auto text-center">
+            <p class="text-sm text-slate-500 py-1">
+                Tailwind CSS Component from <a href="https://www.loopple.com/theme/motion-landing-library?ref=tailwindcomponents" class="text-slate-700 hover:text-slate-900" target="_blank">Motion Landing Library</a> by <a href="https://www.loopple.com" class="text-slate-700 hover:text-slate-900" target="_blank">Loopple Builder</a>.
+            </p>
+        </div>
+    </div>
+  </div>
+  </div>
+  </body>
+</html>
